@@ -18,6 +18,7 @@ public class JwtTokenProvider {
 
   @PostConstruct
   public void initKey() {
+    System.out.println("🔐 JWT Secret loaded = " + jwtProperties.getSecret());
     this.key = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes());
   }
 

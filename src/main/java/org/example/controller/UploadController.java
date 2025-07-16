@@ -21,7 +21,7 @@ public class UploadController {
 
   // Upload CV + extract text + save metadata
   @PostMapping("/upload")
-  public ResponseEntity<String> uploadAndExtract(
+  public ResponseEntity<CVFileResponse> uploadAndExtract(
       @RequestParam("file") MultipartFile file,
       @RequestParam("candidateId") Long candidateId
   ) {
