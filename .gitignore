@@ -1,0 +1,24 @@
+# === Java ===
+/target/
+*.class
+
+# === IDEs ===
+.idea/
+*.iml
+.vscode/
+
+# === OS ===
+.DS_Store
+
+# === Logs and Temp ===
+*.log
+/logs/
+/tmp/
+/*.tmp
+
+# === Build ===
+/out/
+
+# === Secrets ===
+.env
+.env.*
