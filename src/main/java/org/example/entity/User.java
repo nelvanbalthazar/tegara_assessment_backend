@@ -21,5 +21,8 @@ public class User {
 
   private String password;
 
-  private String role; // e.g., "admin" or "recruiter"
+  private String role;
+
+  @Column(nullable = false)
+  private boolean locked = false;
 }
