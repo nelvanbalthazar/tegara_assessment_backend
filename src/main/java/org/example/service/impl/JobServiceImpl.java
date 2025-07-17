@@ -36,7 +36,7 @@ public class JobServiceImpl implements JobService {
     Job job = Job.builder()
         .title(request.getTitle())
         .description(request.getDescription())
-        .department(request.getDepartment())
+        .company(request.getCompany())
         .location(request.getLocation())
         .build();
 
@@ -51,7 +51,7 @@ public class JobServiceImpl implements JobService {
 
     job.setTitle(request.getTitle());
     job.setDescription(request.getDescription());
-    job.setDepartment(request.getDepartment());
+    job.setCompany(request.getCompany());
     job.setLocation(request.getLocation());
 
     jobRepository.save(job);
@@ -68,8 +68,9 @@ public class JobServiceImpl implements JobService {
         job.getId(),
         job.getTitle(),
         job.getDescription(),
-        job.getDepartment(),
-        job.getLocation()
+        job.getCompany(),
+        job.getLocation(),
+        job.getCompany()
     );
   }
 }

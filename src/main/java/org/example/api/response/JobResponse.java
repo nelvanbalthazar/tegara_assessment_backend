@@ -11,4 +11,5 @@ public class JobResponse {
   private String description;
   private String department;
   private String location;
+  private String company;
 }

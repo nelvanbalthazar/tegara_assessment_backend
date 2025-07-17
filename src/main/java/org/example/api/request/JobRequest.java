@@ -10,6 +10,6 @@ public class JobRequest {
   private String title;
 
   private String description;
-  private String department;
+  private String company;
   private String location;
 }

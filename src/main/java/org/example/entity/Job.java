@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "jobs")
 public class Job {
 
   @Id
@@ -18,7 +19,7 @@ public class Job {
 
   private String description;
 
-  private String department;
+  private String company;
 
   private String location;
 }
