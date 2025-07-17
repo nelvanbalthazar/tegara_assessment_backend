@@ -25,18 +25,13 @@ public class AuthServiceImpl implements AuthService {
 
   @Override
   public AuthResponse login(LoginRequest request) {
-    try {
-      authenticationManager.authenticate(
-          new UsernamePasswordAuthenticationToken(
-              request.getEmail(),
-              request.getPassword()
-          )
-      );
-    } catch (Exception e) {
-      e.printStackTrace(); // ✅ Lihat error aslinya di console
-      throw new RuntimeException("Login failed: " + e.getClass().getSimpleName() + " - " + e.getMessage());
-    }
 
+    authenticationManager.authenticate(
+        new UsernamePasswordAuthenticationToken(
+            request.getEmail(),
+            request.getPassword()
+        )
+    );
     User user = userRepository.findByEmail(request.getEmail())
         .orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -54,7 +49,8 @@ public class AuthServiceImpl implements AuthService {
     User user = User.builder()
         .email(request.getEmail())
         .password(passwordEncoder.encode(request.getPassword()))
-        .role(request.getRole())
+        .role(request.getRole().toUpperCase())
+        .locked(false)
         .build();
 
     userRepository.save(user);

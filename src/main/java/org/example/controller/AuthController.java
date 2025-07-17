@@ -7,6 +7,7 @@ import org.example.api.request.RegisterRequest;
 import org.example.api.response.AuthResponse;
 import org.example.service.AuthService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,6 +23,7 @@ public class AuthController {
   }
 
   @PostMapping("/register")
+  @PreAuthorize("hasRole('ADMIN')")
   public ResponseEntity<Void> register(@RequestBody @Valid RegisterRequest request) {
     authService.register(request);
     return ResponseEntity.ok().build();
