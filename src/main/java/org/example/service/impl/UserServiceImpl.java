@@ -1,12 +1,12 @@
 package org.example.service.impl;
 
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.example.api.response.UserResponse;
 import org.example.entity.User;
 import org.example.repository.UserRepository;
 import org.example.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,6 +39,11 @@ public class UserServiceImpl implements UserService {
     return userRepository.findAll().stream()
         .map(user -> new UserResponse(user.getId(), user.getEmail(), user.getRole()))
         .collect(Collectors.toList());
+  }
+
+  @Override
+  public Optional<User> loadUserByEmail (String email) {
+    return userRepository.findByEmail(email);
   }
 
 }
