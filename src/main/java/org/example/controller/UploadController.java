@@ -6,6 +6,7 @@ import org.example.entity.CVFile;
 import org.example.repository.CVFileRepository;
 import org.example.service.UploadService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -21,6 +22,7 @@ public class UploadController {
 
   // Upload CV + extract text + save metadata
   @PostMapping("/upload")
+  @PreAuthorize("hasRole('RECRUITER')")
   public ResponseEntity<CVFileResponse> uploadAndExtract(
       @RequestParam("file") MultipartFile file,
       @RequestParam("candidateId") Long candidateId
@@ -31,12 +33,14 @@ public class UploadController {
 
   // List all uploaded CVs
   @GetMapping
+  @PreAuthorize("hasRole('RECRUITER')")
   public ResponseEntity<List<String>> listCvFiles() {
     return ResponseEntity.ok(uploadService.listUploadedFiles());
   }
 
   // Delete CV from S3
   @DeleteMapping("/{fileName}")
+  @PreAuthorize("hasRole('RECRUITER')")
   public ResponseEntity<Void> deleteCvFile(@PathVariable String fileName) {
     uploadService.deleteFile(fileName);
     return ResponseEntity.noContent().build();
@@ -44,6 +48,7 @@ public class UploadController {
 
   // List all CV metadata by candidate ID
   @GetMapping("/candidate/{id}")
+  @PreAuthorize("hasRole('RECRUITER')")
   public ResponseEntity<List<CVFileResponse>> getCVsForCandidate(@PathVariable Long id) {
     List<CVFile> files = uploadService.getCVsForCandidate(id);
     List<CVFileResponse> responses = files.stream()
@@ -55,11 +60,10 @@ public class UploadController {
 
   // Delete CV by ID
   @DeleteMapping("/{id}")
+  @PreAuthorize("hasRole('RECRUITER')")
   public ResponseEntity<Void> deleteCvById(@PathVariable Long id) {
     uploadService.deleteCvById(id);
     return ResponseEntity.noContent().build();
   }
-
-
 
 }
