@@ -7,10 +7,13 @@ CREATE TABLE users (
 );
 
 CREATE TABLE candidates (
-    id SERIAL PRIMARY KEY,
-    full_name VARCHAR(100),
-    email VARCHAR(100),
-    phone VARCHAR(50),
-    experience TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  id BIGSERIAL PRIMARY KEY,
+  full_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255),
+  phone VARCHAR(50),
+  skills TEXT,
+  education TEXT,
+  experience TEXT,
+  source_file_name VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
