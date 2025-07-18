@@ -72,8 +72,6 @@ You can view the complete database schema in the following diagram:
 
    ```sql 
    CREATE DATABASE cv_portal;
-```
-```
 
 3. **Add Environment File**
    Download the .env file from the link below and place it in the root directory of the project. [Download .env file](https://drive.google.com/file/d/17ZS9pxKStiKIm9MsB1R8WFTOZjyK7fQe/view?usp=drive_link)
@@ -94,9 +92,9 @@ You can view the complete database schema in the following diagram:
   ```
 4  **Run The Springboot**
    Use the terminal or your IDE to start the Spring Boot app:
-
   ```sql 
   mvn spring-boot:run
+ ```
 
 
 
