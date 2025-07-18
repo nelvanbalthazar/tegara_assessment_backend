@@ -1,10 +1,5 @@
 # 🧠 Tegara Assessment Backend
 
-[![Java](https://img.shields.io/badge/Java-17-blue)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-[![Spring Boot](https://img.shields.io/badge/Spring--Boot-3.2-green)](https://spring.io/projects/spring-boot)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://www.postgresql.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-
 This is the **backend service** for the **CV Portal Site**, developed using:
 
 - **Spring Boot** with **Java**
@@ -44,16 +39,15 @@ This is the **backend service** for the **CV Portal Site**, developed using:
 
 ---
 
-## 📦 Project Structure
+
 
 
 Below are the SQL SCRIPT for all tables and relation
-1 candidates and user : https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V1__create_users_and_candidates.sql
-2. jobs : https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V2__create_jobs_table.sql
-3. cv files https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V3__create_cv_files_table.sql
-4. seeding data https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V4__seeding_data_users.sql
-
-below are the drawing design
+**Database Design **: The design of the database [Database Design Image ](https://drive.google.com/file/d/1mqCDie9eX7wzEN0mwquM5nD_2nlRBnuo/view?usp=drive_link) `Gdrive`
+  - candidates and user : [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V1__create_users_and_candidates.sql) `Github`
+  - jobs : [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V2__create_jobs_table.sql) `Git hub`
+  - cv files:  [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V3__create_cv_files_table.sql) `Github`
+  - seeding data:  [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V4__seeding_data_users.sql) `Github`
 
 
   
