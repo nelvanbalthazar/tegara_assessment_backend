@@ -70,8 +70,7 @@ You can view the complete database schema in the following diagram:
 2. **Install PostgreSQL**  
    Make sure PostgreSQL is installed and running. Then create the database:
 
-   ```sql
-   CREATE DATABASE cv_portal;
+   ```sql CREATE DATABASE cv_portal;
 
 
 
