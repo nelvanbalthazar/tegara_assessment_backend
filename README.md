@@ -42,12 +42,25 @@ This is the **backend service** for the **CV Portal Site**, developed using:
 
 
 
-Below are the SQL SCRIPT for all tables and relation
-**Database Design **: The design of the database [Database Design Image ](https://drive.google.com/file/d/1mqCDie9eX7wzEN0mwquM5nD_2nlRBnuo/view?usp=drive_link) `Gdrive`
-  - candidates and user : [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V1__create_users_and_candidates.sql) `Github`
-  - jobs : [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V2__create_jobs_table.sql) `Git hub`
-  - cv files:  [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V3__create_cv_files_table.sql) `Github`
-  - seeding data:  [SQL Script](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V4__seeding_data_users.sql) `Github`
+## 🗃️ Database Design
+
+You can view the complete database schema in the following diagram:  
+📷 [Database Design Image (Google Drive)](https://drive.google.com/file/d/1mqCDie9eX7wzEN0mwquM5nD_2nlRBnuo/view?usp=drive_link)
+
+### 🔧 SQL Migration Scripts
+
+- **Users & Candidates Table**  
+  📄 [V1__create_users_and_candidates.sql](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V1__create_users_and_candidates.sql)
+
+- **Jobs Table**  
+  📄 [V2__create_jobs_table.sql](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V2__create_jobs_table.sql)
+
+- **CV Files Table**  
+  📄 [V3__create_cv_files_table.sql](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V3__create_cv_files_table.sql)
+
+- **Seeding Initial User Data**  
+  📄 [V4__seeding_data_users.sql](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V4__seeding_data_users.sql)
+
 
 
   
