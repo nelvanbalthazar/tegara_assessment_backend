@@ -27,7 +27,7 @@ This is the **backend service** for the **CV Portal Site**, developed using:
 ## 🛠️ Tech Stack
 
 | Layer        | Technology                 |
-|-------------|----------------------------|
+|------------- |----------------------------|
 | Language     | Java 17                    |
 | Framework    | Spring Boot 3.2            |
 | Database     | PostgreSQL                 |
@@ -70,7 +70,40 @@ You can view the complete database schema in the following diagram:
 2. **Install PostgreSQL**  
    Make sure PostgreSQL is installed and running. Then create the database:
 
-   ```sql CREATE DATABASE cv_portal;
+   ```sql 
+   CREATE DATABASE cv_portal;
+```
+```
+
+3. **Add Environment File**
+   Download the .env file from the link below and place it in the root directory of the project. [Download .env file](https://drive.google.com/file/d/17ZS9pxKStiKIm9MsB1R8WFTOZjyK7fQe/view?usp=drive_link)
+   from Intellij Browse the env file 
+
+4  **Add Seeding Data**
+    Open and edit the following file:
+   
+   ```directory
+   /src/main/resources/db/migration/V4__seeding_data_users.sql;
+   ```
+   Insert your user account details. The password must be hashed using  [bcrypt-generator.com](https://bcrypt-generator.com/) with a cost factor of 10.
+   Example :
+    
+   ```sql 
+  INSERT INTO users (email, password, role)
+  VALUES ('your@email.com', '$2a$10$yourHashedPasswordHere', 'ROLE_ADMIN');
+  ```
+4  **Run The Springboot**
+   Use the terminal or your IDE to start the Spring Boot app:
+
+  ```sql 
+  mvn spring-boot:run
+
+
+
+
+    
+
+    
 
 
 
