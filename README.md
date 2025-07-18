@@ -40,8 +40,6 @@ This is the **backend service** for the **CV Portal Site**, developed using:
 ---
 
 
-
-
 ## 🗃️ Database Design
 
 You can view the complete database schema in the following diagram:  
@@ -60,6 +58,24 @@ You can view the complete database schema in the following diagram:
 
 - **Seeding Initial User Data**  
   📄 [V4__seeding_data_users.sql](https://github.com/nelvanbalthazar/tegara_assessment_backend/blob/main/src/main/resources/db/migration/V4__seeding_data_users.sql)
+
+
+---
+
+## 🧪 Steps to Run Locally
+
+1. **Install Java 17**  
+   Ensure Java 17 is installed and available in your environment.
+
+2. **Install PostgreSQL**  
+   Make sure PostgreSQL is installed and running. Then create the database:
+
+   ```sql
+   CREATE DATABASE cv_portal;
+
+
+
+
 
 
 
