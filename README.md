@@ -75,9 +75,9 @@ You can view the complete database schema in the following diagram:
 
 3. **Add Environment File**
    Download the .env file from the link below and place it in the root directory of the project. [Download .env file](https://drive.google.com/file/d/17ZS9pxKStiKIm9MsB1R8WFTOZjyK7fQe/view?usp=drive_link)
-   (Use IntelliJ or your file browser to confirm it is correctly placed.)
+   Set this .env file in IntelliJ's Run Configuration settings.
 
-4.  **Add Seeding Data**
+5.  **Add Seeding Data**
     Open and edit the following file:
    
     ```directory
@@ -90,12 +90,12 @@ You can view the complete database schema in the following diagram:
     INSERT INTO users (email, password, role)
     VALUES ('your@email.com', '$2a$10$yourHashedPasswordHere', 'ROLE_ADMIN');
     ```
-5.  **Run The Springboot**
+6.  **Run The Springboot**
     Use the terminal or your IDE to start the Spring Boot app:
     ``` 
     mvn spring-boot:run
     ```
-
+    click the ▶️ Run button in IntelliJ to start the app.
 
 
 
